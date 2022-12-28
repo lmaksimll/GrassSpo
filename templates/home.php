@@ -1,3 +1,5 @@
+<?php require_once 'templates/header.php'?>
+<?php if(isset($_SESSION['USER_ID'])) : ?>
 <main>
     <div class="filter-container">
     <div id="filter-title">
@@ -67,3 +69,5 @@
       <?php endforeach ?>
     </div>
 </main>
+<?php endif;?>
+<?php require_once 'templates/footer.php'?>

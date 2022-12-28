@@ -10,14 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="container">
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="Logo" width="156" height="50">
+            <a class="navbar-brand" href="/">
+                <img src="../img/logo.png" alt="Logo" width="156" height="50">
             </a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
@@ -60,11 +61,24 @@
         </div>
 
         <div class="col-2 login">
-            <img src="img/login.png" alt="login">
-            <a>Вход и регистрация</a>
+            <?php if(isset($_SESSION['USER_ID'])) : ?>
+                <div class="username-container">
+                    <span><?= $user['full_name']?></span>
+                    <a href="/logout.php">
+                        <button class="btn btn-info">
+                            Выйти
+                        </button>
+                    </a>
+                </div>
+            <?php else:?>
+                <a href="/templates/authorization-view.php">
+                    <img src="../img/login.png" alt="login">
+                    <a>Вход и регистрация</a>
+                </a>
+            <?php endif;?>
         </div>
         <div class="col-2 dump">
-            <img src="img/dump.png" alt="dump">
+            <img src="../img/dump.png" alt="dump">
             <a>Корзина пуста</a>
         </div>
     </div>

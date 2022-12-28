@@ -1,12 +1,11 @@
 <?php
-class Storage
+class ProductStorage
 {
 
   private $db;
 
-  public function __construct()
-  {
-    $this->db = new PDO('mysql:host=localhost;dbname=grass', 'root', 'root');
+  public function __construct($db) {
+    $this->db = $db;
   }
 
   public function fetchProducts($get) {

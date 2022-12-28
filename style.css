@@ -76,6 +76,31 @@
     text-align: center;
 }
 
+.registration-form-container{
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.registration-form-title{
+    text-align: center;
+    font-size: 30px;
+}
+
+.registration-link-button{
+    display: flex;
+    margin-top: 30px;
+}
+
+.registration-button{
+    margin-left: 30px;
+}
+
+#registration-button-text{
+    margin-top: 7px;
+}
+
 
 
 

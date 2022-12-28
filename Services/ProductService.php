@@ -1,22 +1,22 @@
 <?php
 
-class Service {
-  private Storage $storage;
+class ProductService {
+  private ProductStorage $productStorage;
 
   public function __construct($storage) {
-    $this->storage = $storage;
+    $this->productStorage = $storage;
   }
 
   public function filtredProducts() {
     if(isset($_GET['number']) && isset($_GET['name']) && isset($_GET['min_mass']) && isset($_GET['max_mass'])) {
-      return $this->storage->fetchProducts($this->preparedGet());
+      return $this->productStorage->fetchProducts($this->preparedGet());
     } else {
-      return $this->storage->fetch();
+      return $this->productStorage->fetch();
     }
   }
 
   public function allBuyers(){
-    return $this->storage->allBuyers();
+    return $this->productStorage->allBuyers();
   }
 
   private function preparedGet() {

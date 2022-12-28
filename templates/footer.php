@@ -58,7 +58,7 @@
             <b><a href="#" class="footer-link">+7 (960) 870-10-70</a></b><br><br>
             <p>Для поставщиков:</p>
             <b><a href="#" class="footer-link">supplier@grass.su</a></b><br><br>
-            <img src="img/footer-info.png" alt="Сделано в*">
+            <img src="../img/footer-info.png" alt="Сделано в*">
         </div>
     </div>
 </div>
@@ -70,5 +70,7 @@
         <p>Юридическая информация | Правила сайта | ООО «Грассмарт». Все права защищены</p>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
